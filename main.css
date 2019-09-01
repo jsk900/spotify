@@ -43,7 +43,20 @@ header input {
   font-size: 1em;
   color: #353333;
   background-color: ghostwhite;
-  margin-left: 100px;
+  margin-left: 70px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+}
+
+header select {
+  width: 250px;
+  height: 40px;
+  font-size: 1em;
+  color: #353333;
+  background-color: ghostwhite;
+  margin-left: 10px;
   padding: 5px;
   border: none;
   outline: none;
@@ -62,23 +75,6 @@ header button {
   outline: 1px solid ghostwhite;
   text-transform: uppercase;
   cursor: pointer;
-}
-
-.more {
-  margin-left: 20px;
-  border: none;
-  outline: 1px solid #ffd99f;
-  font-size: 0.7em;
-  text-align: center;
-  background-color: transparent;
-  color: #ffd99f;
-  padding: 3px;
-  width: 60px;
-  height: 30px;
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
-  display: inline-block;
 }
 
 section {
@@ -123,4 +119,17 @@ figcaption {
   color: #424040;
   background-color: #f0e9e9;
   overflow: visible;
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: #353333;
+  margin-top: 100px;
+}
+
+footer p {
+  font-size: 0.7em;
+  color: ghostwhite;
+  margin: 15px 20px;
 }
