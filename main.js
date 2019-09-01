@@ -10,6 +10,7 @@ let nextPage;
 let h1;
 
 //Get DOM Elements
+const body = document.querySelector('body');
 const input = document.querySelector('input[type="text"]');
 const select = document.querySelector('select');
 const go = document.querySelector('button');
@@ -18,10 +19,9 @@ const footer = document.querySelector('footer');
 
 const start = () => {
   input.focus();
-  h1 = document.createElement('h1');
-  h1.innerHTML = 'Please enter an artist or album name';
-  section.appendChild(h1);
-  section.style = 'height: 63.3vh';
+  body.style.height = '100vh';
+  section.style =
+    'background-image: url("./images/music.jpg"); background-size: cover';
 };
 
 //Get data from api
@@ -104,6 +104,8 @@ select.addEventListener('click', e => {
 
 go.addEventListener('click', e => {
   e.preventDefault();
+  body.style.height = 'auto';
+  section.style.backgroundImage = 'none';
   artist = input.value;
   urlLoad = `${url}?q=${artist}&type=${type}`;
   input.value = '';
