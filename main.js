@@ -2,11 +2,12 @@ window.onload = () => start();
 
 //Globals
 const url = 'https://elegant-croissant.glitch.me/spotify';
-let artist = 'prince';
+let artist = '';
 let type = 'artist';
 let urlLoad;
 let search;
 let nextPage;
+let h1;
 
 //Get DOM Elements
 const input = document.querySelector('input[type="text"]');
@@ -17,8 +18,10 @@ const footer = document.querySelector('footer');
 
 const start = () => {
   input.focus();
-  urlLoad = `${url}?q=${artist}&type=${type}`;
-  dataLoad(urlLoad);
+  h1 = document.createElement('h1');
+  h1.innerHTML = 'Please enter an artist or album name';
+  section.appendChild(h1);
+  section.style = 'height: 63.3vh';
 };
 
 //Get data from api
@@ -41,6 +44,11 @@ const checkStatus = response => {
 
 //Show data
 const show = response => {
+  if (document.querySelector('section h1')) {
+    section.removeChild(h1);
+    section.style.height = 'auto';
+  }
+
   search = response.artists || response.albums;
   nextPage = search.next;
   search.items.map(art => {

@@ -88,6 +88,11 @@ section {
   overflow: hidden;
 }
 
+section h1 {
+  margin-top: 250px;
+  color: #353333;
+}
+
 figure {
   margin: 20px 10px 10px 20px;
   width: 200px;
